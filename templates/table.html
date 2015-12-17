@@ -1,0 +1,14 @@
+{%- if vars -%}
+<table>
+  <thead>
+      <tr><th>Variable</th><th>Value</th></tr>
+  </thead>
+  {%- for k, v in vars.items() -%}
+  <tr>
+      <td>{{ k | safe }}</td><td>{{ v | safe }}</td>
+  </tr>
+  {%- endfor -%}
+</table>
+{%- else -%}
+--
+{%- endif -%}

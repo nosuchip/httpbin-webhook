@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+      table {border: 1px solid black; border-collapse: collapse;}
+      td, tr {border: 1px solid black; padding: 4px; }
+  </style>
+</head>
+
+<body>
+  <p>Hello, it is me, hear service.</p>
+
+  <p>I received request from address <b>{{ address }}</b> (referer: <b>{{ referrer }}</b>).</p>
+
+  <h3>Request vars:</h3>
+    {% include 'table.html' %}
+  <hr/>
+
+  Always at your service!
+
+</body>
+</html>

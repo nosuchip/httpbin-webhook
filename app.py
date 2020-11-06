@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
 
-# Flask application to demo accepting payments via PayPal
-# using the rest sdk for Python
-
 import os
 from flask import Flask, request, render_template
 from flask_mail import Mail, Message

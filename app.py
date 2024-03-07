@@ -3,9 +3,9 @@
 import os
 from flask import Flask, request, render_template
 from flask_mail import Mail, Message
-from datetime import datetime
-import json
 from collections import OrderedDict
+
+recipient = os.environ["RECIPIENT"]
 
 app = Flask(__name__)
 app.config['MAIL_USERNAME'] = 'apikey'
@@ -40,7 +40,7 @@ def index(path=None):
     if not request.args.get('skip_mail'):
         msg = Message("Hear service report",
                       html=html,
-                      recipients=["nosuchip@gmail.com"])
+                      recipients=[recipient])
         mail.send(msg)
 
     return html
